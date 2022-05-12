@@ -1,4 +1,4 @@
-package com.samrudh;
+package com.samrudh.Other;
 class Billgenerate {
     String name;
     private int quantity;

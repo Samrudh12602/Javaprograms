@@ -1,4 +1,4 @@
-package com.samrudh;
+package com.samrudh.Other;
 
 public class Point {
     int x,y;

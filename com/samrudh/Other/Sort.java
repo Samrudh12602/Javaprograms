@@ -1,4 +1,4 @@
-package com.samrudh;
+package com.samrudh.Other;
 
 import java.util.Scanner;
 

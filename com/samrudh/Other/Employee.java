@@ -1,4 +1,4 @@
-package com.samrudh;
+package com.samrudh.Other;
 
 public class Employee {
     private int age;

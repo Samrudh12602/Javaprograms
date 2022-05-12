@@ -1,4 +1,4 @@
-package com.samrudh;
+package com.samrudh.Other;
 public class Stacks {
         private Employee[] stack;
         private int top=0;

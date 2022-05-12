@@ -1,6 +1,4 @@
-package com.samrudh;
-
-import com.samrudh.Employee;
+package com.samrudh.Other;
 
 public class Main {
     public static void main(String[] args) {
