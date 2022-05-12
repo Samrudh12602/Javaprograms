@@ -15,8 +15,8 @@ public class Sort {
             sc.nextLine();
         }
         display(array);
-//        bubblesort(array);
-//        selectionsort(array);
+        bubblesort(array);
+        selectionsort(array);
         insertionsort(array);
     }
     public static void display(int[] array){
