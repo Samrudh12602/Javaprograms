@@ -26,8 +26,6 @@ class Billgenerate {
         b[2]= new Billgenerate(3,"Salt",25,3);
         for(int i=0;i<b.length;i++)
             b[i].display();
-        System.out.println("github succesfully updated and executed");
-        System.out.println("github ran succesfuly on MacBook");
         System.out.println("\t\t\t\t\t\t\t  Final Amount: "+final_amt);
     }
 }
