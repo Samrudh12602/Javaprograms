@@ -1,5 +1,4 @@
 package com.samrudh.OOPS;
-
 public class A {
         int number;
         String name;
