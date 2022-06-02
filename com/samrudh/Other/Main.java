@@ -1,5 +1,4 @@
 package com.samrudh.Other;
-
 public class Main {
     public static void main(String[] args) {
         Stacks stacks= new Stacks(10);
