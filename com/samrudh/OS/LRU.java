@@ -45,9 +45,8 @@ class LRU
     public static void main(String args[])
     {
         int pages[] = {7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2};
-        int capacity = 4;
-        System.out.println(pageFaults(pages, pages.length, capacity));
+        int capacity = 3;
+        System.out.println( "Page Faults are : "+pageFaults(pages, pages.length, capacity));
     }
 }
-
 //Let say the page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2

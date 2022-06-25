@@ -2,7 +2,7 @@ package com.samrudh.OS;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
-class Test
+class FIFO
 {
     static int pageFaults(int pages[], int n, int capacity)
     {

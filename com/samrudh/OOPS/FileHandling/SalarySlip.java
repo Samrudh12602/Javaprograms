@@ -1,9 +1,5 @@
 package com.samrudh.OOPS.FileHandling;
-
-import com.samrudh.OOPS.Employee;
-
 import java.io.*;
-import java.util.Scanner;
 
 public class SalarySlip {
     public static void main(String[] args) throws IOException {
@@ -12,6 +8,7 @@ public class SalarySlip {
         File f= new File("employee.txt");
         f.createNewFile();
         File op=new File("salaryslip.txt");
+        op.createNewFile();
         BufferedReader bf;
         FileWriter fileWriter;
         try {
