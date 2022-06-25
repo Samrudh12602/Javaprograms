@@ -1,10 +1,8 @@
 package com.samrudh.OOPS.FileHandling;
-
 import java.io.*;
-import java.util.Scanner;
 
 public class CopyFileContents {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
         try {
             FileWriter fileWriter= new FileWriter("output.txt");
             FileReader fileReader= new FileReader("input.txt");

@@ -38,10 +38,6 @@ class Billgenerate {
         }
         System.out.println("\n\t\t.........BILL REPORT........\t\t");
         System.out.println("It No \t Item Name \t Price \t Quantity \t Total Amount");
-//        b[0]=new Billgenerate(1,"Sugar",40,4);
-//        b[1]= new Billgenerate(2,"Tea",50,2);
-//        b[2]= new Billgenerate(3,"Clove",10,3);
-//        b[3]= new Billgenerate(4,"Ginger",15,5);
         for(int i=0;i<num;i++)
             b[i].display();
         System.out.println("\t\t\t\t\t\t\t  Final Amount: "+final_amt);
