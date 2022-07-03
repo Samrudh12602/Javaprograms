@@ -3,6 +3,7 @@ package com.samrudh.Other;
 import java.util.Scanner;
 
 public class Sort {
+    static int counter=0;
     public static void main(String[] args) {
         int array[];
         Scanner sc= new Scanner(System.in);
@@ -43,16 +44,18 @@ public class Sort {
         }
     }
     public static void selectionsort(int[] array){
+        counter=0;
         for(int lastunsortedindex= array.length-1;lastunsortedindex>0;lastunsortedindex--){
             int largest=0;
-
+            counter++;
             for(int i=1;i<=lastunsortedindex;i++){
                 if(array[i]>array[largest]){
                     largest=i;
-
                 }
             }
             swap(array,largest,lastunsortedindex);
+            System.out.println("\nArray after iteration "+counter +":");
+            display(array);
         }
         System.out.println("\nArray after Selection sort is:");
         for(int i=0;i<array.length;i++){
@@ -60,15 +63,17 @@ public class Sort {
         }
     }
     public static void insertionsort(int[] array){
+        counter=0;
         for(int firstunsortedindex=1;firstunsortedindex<array.length;firstunsortedindex++){
-
             int newElement= array[firstunsortedindex];
-
             int i;
             for(i=firstunsortedindex;i>0 && array[i-1]>newElement;i--){
                 array[i]=array[i-1];
             }
             array[i]=newElement;
+            counter++;
+            System.out.println("\nArray after iteration "+counter +":");
+            display(array);
         }
         System.out.println("\nArray after Insertion sort is:");
         for(int i=0;i<array.length;i++){
