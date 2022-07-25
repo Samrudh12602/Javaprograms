@@ -8,10 +8,10 @@ public class SingleInheritance {
         this.b=b;
     }
 }
-class B extends SingleInheritance{
+class B1 extends SingleInheritance{
     int a1;
     String b1;
-    B(int a, String b,int a1, String b1) {
+    B1(int a, String b,int a1, String b1) {
         super(a, b);
         this.a1=a1;
         this.b1=b1;
@@ -20,7 +20,7 @@ class B extends SingleInheritance{
         System.out.println(super.a+" "+super.b+" "+a1+" "+b1+" ");
     }
     public static void main(String[] args) {
-        B bit= new B(10,"Sam",20,"Samrudh");
+        B1 bit= new B1(10,"Sam",20,"Samrudh");
         bit.display();
     }
 }
