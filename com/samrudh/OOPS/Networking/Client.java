@@ -76,10 +76,8 @@ public class Client extends JFrame implements ActionListener {
         Client GUI =  new Client();
         try {
             String msgin = "";
+
             s = new Socket(InetAddress.getByName(args[0]),Integer.valueOf(args[1]));
-            // server ip address and port must be specified as command line arguments
-            // eg. java client 192.168.1.112 5000 (server ip & port)
-            // eg. java 127.0.0.1 5000    for localhost (same machine)
             dis = new DataInputStream(s.getInputStream());
             dout = new DataOutputStream(s.getOutputStream());
 

@@ -1,16 +1,18 @@
 package com.samrudh.OOPS.FileHandling;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
 
 public class RandomAccessFileExample {
     static final String FILEPATH ="myFile.txt";
-    File f= new File("myFile.txt");
+    static File f= new File("myFile.txt");
     public static void main(String[] args) {
         try {
-            System.out.println(new String(readFromFile(FILEPATH, 0, 65)));
-            writeToFile(FILEPATH, "I love my country and my people", 31);
+            for(int i=1;i<=10;i++)
+                writeToFile(FILEPATH,String.valueOf(10*i)+"\n",Math.toIntExact(f.length()));
+            System.out.println(new String(readFromFile(FILEPATH, 0, Math.toIntExact(f.length()))));
+            for(int i=1;i<=10;i++)
+            writeToFile(FILEPATH,String.valueOf(12*i)+"\n" , Math.toIntExact(f.length()));
+            System.out.println(new String(readFromFile(FILEPATH, 0, Math.toIntExact(f.length()))));
         } catch (IOException e) {
             e.printStackTrace();
         }
