@@ -7,7 +7,6 @@ public class FileCreation {
         try {
             BufferedReader fileReader= new BufferedReader(new FileReader("input.txt"));
             int sum=0;
-            int i;
             while(true){
                 String lineRead= fileReader.readLine();
                 if(lineRead==null){

@@ -1,7 +1,6 @@
-package com.samrudh.OS;
+package com.samrudh.OS.Scheduling;
 public class FirstComeFirstServe {
     public static void main(String[] args) {
-        int at = 0;
         float atat = 0, awt = 0;
         int ct[] = new int[5];
         int wt[] = new int[5];
@@ -41,5 +40,3 @@ public class FirstComeFirstServe {
         System.out.println("--------------------");
     }
 }
-
-

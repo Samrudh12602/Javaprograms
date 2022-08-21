@@ -81,12 +81,10 @@ public class Server extends JFrame implements ActionListener {
             s = ss.accept();
             dis = new DataInputStream(s.getInputStream());
             dout = new DataOutputStream(s.getOutputStream());
-
             while (!msgin.equals("exit")) {
                 msgin = dis.readUTF();
                 msg_area.setText(msg_area.getText() + "\n Client : " + msgin);
             }
-
         } catch (Exception e) {
             System.out.println(e);
         }

@@ -9,7 +9,7 @@ public class ThreadExample extends Thread{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("thread "+i+" running iteration "+ i);
+            System.out.println("thread "+currentThread().getName()+" running iteration "+ i);
         }
     }
 

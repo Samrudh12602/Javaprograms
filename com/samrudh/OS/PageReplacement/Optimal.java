@@ -1,9 +1,6 @@
-package com.samrudh.OS;
+package com.samrudh.OS.PageReplacement;
 
 public class Optimal {
-    //The idea is simple, for every reference we do following :
-    //If referred page is already present, increment hit count.
-    //If not present, find if a page that is never referenced in future. If such a page exists, replace this page with new page. If no such page exists, find a page that is referenced farthest in future. Replace this page with new page.
         static boolean search(int key, int[] fr)
         {
             for (int i = 0; i < fr.length; i++)
@@ -11,8 +8,7 @@ public class Optimal {
                     return true;
             return false;
         }
-        static int predict(int pg[], int[] fr, int pn,
-                           int index)
+        static int predict(int pg[], int[] fr, int pn, int index)
         {
             int res = -1, farthest = index;
             for (int i = 0; i < fr.length; i++) {

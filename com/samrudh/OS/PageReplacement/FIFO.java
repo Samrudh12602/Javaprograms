@@ -1,4 +1,4 @@
-package com.samrudh.OS;
+package com.samrudh.OS.PageReplacement;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;

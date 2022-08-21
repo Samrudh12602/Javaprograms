@@ -13,20 +13,16 @@ public class MyPassword  {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500,500);
         frame.setLayout(null);
-
         JLabel name_label = new JLabel("Name:");
         name_label.setBounds(40,40,100,50);
         frame.add(name_label);
-
         JLabel pass_label = new JLabel();
         pass_label.setText("Password:");
         pass_label.setBounds(30,100,100,50);
         frame.add(pass_label);
-
         JTextField name= new JTextField();
         name.setBounds(100,40,200,50);
         frame.add(name);
-
         JPasswordField passwordField= new JPasswordField();
         passwordField.setBounds(100,100,200,50);
         frame.add(passwordField);
@@ -36,12 +32,10 @@ public class MyPassword  {
         b.setLabel("View");
         frame.add(b);
 
-
         Button login = new Button();
         login.setBounds(175,200,100,50);
         login.setLabel("Login");
         frame.add(login);
-
 
         ActionListener actionListener = new ActionListener() {
             @Override

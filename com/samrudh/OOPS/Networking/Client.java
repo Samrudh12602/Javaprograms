@@ -80,7 +80,6 @@ public class Client extends JFrame implements ActionListener {
             s = new Socket(InetAddress.getByName(args[0]),Integer.valueOf(args[1]));
             dis = new DataInputStream(s.getInputStream());
             dout = new DataOutputStream(s.getOutputStream());
-
             while (!msgin.equals("exit")) {
                 msgin = dis.readUTF();
                 msg_area.setText(msg_area.getText()+"\n Server : " + msgin);
@@ -88,6 +87,5 @@ public class Client extends JFrame implements ActionListener {
         } catch (Exception e) {
             System.out.println(e);
         }
-
     }
 }

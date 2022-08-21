@@ -1,11 +1,9 @@
-package com.samrudh.OS;
+package com.samrudh.OS.Scheduling;
 import java.util.Scanner;
 
 public class PriorityScheduling{
-
     public static void main(String args[]) {
         Scanner s = new Scanner(System.in);
-
         int x,n,p[],pp[],bt[],w[],t[],awt,atat,i;
         p = new int[10];
         pp = new int[10];
