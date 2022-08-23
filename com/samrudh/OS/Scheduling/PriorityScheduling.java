@@ -4,16 +4,15 @@ import java.util.Scanner;
 public class PriorityScheduling{
     public static void main(String args[]) {
         Scanner s = new Scanner(System.in);
-        int x,n,p[],pp[],bt[],w[],t[],awt,atat,i;
-        p = new int[10];
-        pp = new int[10];
-        bt = new int[10];
-        w = new int[10];
-        t = new int[10];
+        int x,n,p[],pp[],bt[],wt[],tat[],awt,atat,i;
+        p = new int[5];
+        pp = new int[5];
+        bt = new int[5];
+        wt = new int[5];
+        tat = new int[5];
         System.out.print("Enter the number of process : ");
         n = s.nextInt();
-        System.out.print("\n\t Enter burst time : time priorities \n");
-
+        System.out.print("\n\t Enter burst time : priorities \n");
         for(i=0;i<n;i++)
         {
             System.out.print("\nProcess["+(i+1)+"]:");
@@ -39,24 +38,23 @@ public class PriorityScheduling{
                 }
             }
         }
-        w[0]=0;
+        wt[0]=0;
         awt=0;
-        t[0]=bt[0];
-        atat=t[0];
+        tat[0]=bt[0];
+        atat=tat[0];
         for(i=1;i<n;i++)
         {
-            w[i]=t[i-1];
-            awt+=w[i];
-            t[i]=w[i]+bt[i];
-            atat+=t[i];
+            wt[i]=tat[i-1];
+            awt+=wt[i];
+            tat[i]=wt[i]+bt[i];
+            atat+=tat[i];
         }
         System.out.print("\n\nProcess \t Burst Time \t Wait Time \t Turn Around Time   Priority \n");
         for(i=0;i<n;i++)
-            System.out.print("\n   "+p[i]+"\t\t   "+bt[i]+"\t\t     "+w[i]+"\t\t     "+t[i]+"\t\t     "+pp[i]+"\n");
+            System.out.print("\n   "+p[i]+"\t\t   "+bt[i]+"\t\t     "+wt[i]+"\t\t     "+tat[i]+"\t\t     "+pp[i]+"\n");
         awt/=n;
         atat/=n;
         System.out.print("\n Average Wait Time : "+awt);
         System.out.print("\n Average Turn Around Time : "+atat);
-
     }
 }

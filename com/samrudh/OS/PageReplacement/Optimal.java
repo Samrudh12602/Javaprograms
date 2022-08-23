@@ -8,13 +8,13 @@ public class Optimal {
                     return true;
             return false;
         }
-        static int predict(int pg[], int[] fr, int pn, int index)
+        static int predict(int pages[], int[] frame, int page_length, int index)
         {
             int res = -1, farthest = index;
-            for (int i = 0; i < fr.length; i++) {
+            for (int i = 0; i < frame.length; i++) {
                 int j;
-                for (j = index; j < pn; j++) {
-                    if (fr[i] == pg[j]) {
+                for (j = index; j < page_length; j++) {
+                    if (frame[i] == pages[j]) {
                         if (j > farthest) {
                             farthest = j;
                             res = i;
@@ -22,37 +22,36 @@ public class Optimal {
                         break;
                     }
                 }
-                if (j == pn)
+                if (j == page_length)
                     return i;
             }
             return (res == -1) ? 0 : res;
         }
-
-        static void optimalPage(int pg[], int pn, int fn)
+        static void optimalPage(int pages[], int page_length, int frame_size)
         {
-            int[] fr = new int[fn];
+            int[] frame = new int[frame_size];
             int hit = 0;
             int index = 0;
-            for (int i = 0; i < pn; i++) {
-                if (search(pg[i], fr)) {
+            for (int i = 0; i < page_length; i++) {
+                if (search(pages[i], frame)) {
                     hit++;
                     continue;
                 }
-                if (index < fn)
-                    fr[index++] = pg[i];
+                if (index < frame_size)
+                    frame[index++] = pages[i];
                 else {
-                    int j = predict(pg, fr, pn, i + 1);
-                    fr[j] = pg[i];
+                    int j = predict(pages, frame, page_length, i + 1);
+                    frame[j] = pages[i];
                 }
             }
             System.out.println("No. of hits = " + hit);
-            System.out.println("No. of misses = " + (pn - hit));
+            System.out.println("No. of misses = " + (page_length - hit));
         }
         public static void main(String[] args)
         {
-            int pg[] = { 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2 };
-            int pn = pg.length;
-            int fn = 4;
-            optimalPage(pg, pn, fn);
+            int pages[] = { 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2 };
+            int page_length = pages.length;
+            int frame_size = 4;
+            optimalPage(pages, page_length, frame_size);
         }
-    }
+}

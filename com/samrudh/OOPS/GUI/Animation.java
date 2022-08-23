@@ -5,7 +5,8 @@ import java.awt.*; import javax.swing.*; import java.awt.event.*;
 class Pan extends JPanel implements ActionListener{
     Timer tim;
     int xvel=1,yvel=1,x1vel=1,y1vel=1,x=450,y=0,x1=0,y1=450;
-    Color c1=Color.blue,c2=Color.cyan,c3=Color.magenta,c4=Color.pink; static int i1=0,i2=2,i3=4,i4=6,k=10;
+    Color c1=Color.blue,c2=Color.cyan,c3=Color.magenta,c4=Color.pink;
+    static int i1=0,i2=2,i3=4,i4=6,k=10;
     Pan(){
         this.setPreferredSize(new Dimension(500,500)); this.setBackground(Color.black);
         tim=new Timer(10,this); tim.start();

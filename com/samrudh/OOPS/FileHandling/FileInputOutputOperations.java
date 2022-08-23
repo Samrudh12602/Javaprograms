@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class FileInputOutputOperations {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         try {
             FileInputStream fis= new FileInputStream("input.txt");
             int data;

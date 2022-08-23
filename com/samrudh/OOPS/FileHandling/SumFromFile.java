@@ -2,7 +2,7 @@ package com.samrudh.OOPS.FileHandling;
 
 import java.io.*;
 
-public class FileCreation {
+public class SumFromFile {
     public static void main(String[] args) {
         try {
             BufferedReader fileReader= new BufferedReader(new FileReader("input.txt"));

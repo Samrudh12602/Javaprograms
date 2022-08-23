@@ -10,11 +10,7 @@ public class SciCalculator extends JFrame implements ActionListener{
     JTextField input;
     String expression = "",op="";
     // All Buttons of the calculator
-    String arr[] = {"Rad","10^","fact","(",")","%","clear",
-            "asin","sin","sqrt","7","8","9","/",
-            "acos","cos","ln","4","5","6","*",
-            "atan","tan","log","1","2","3","-",
-            "π","e","^","0",".","=","+"};
+    String arr[] = {"Rad","10^","fact","(",")","%","clear", "asin","sin","sqrt","7","8","9","/", "acos","cos","ln","4","5","6","*", "atan","tan","log","1","2","3","-", "π","e","^","0",".","=","+"};
     int flag = 0; // Flag Variable for extracting operands from string expression
     boolean hasTwoOps = false;
     double num1 = 0,num2 = 0,ans=0; // Variables to store operands
@@ -23,7 +19,6 @@ public class SciCalculator extends JFrame implements ActionListener{
     SciCalculator(){
         c = getContentPane();
         c.setLayout(null);
-
         input = new JTextField();
         input.setLocation(15, 5);
         input.setSize(540, 40);
@@ -53,7 +48,6 @@ public class SciCalculator extends JFrame implements ActionListener{
         JButton btn = new JButton(str);
         btn.setSize(70,30);
         btn.setLocation(x,y);
-
         char ch = str.charAt(0);
         if(Character.isDigit(ch))
             btn.setBackground(Color.LIGHT_GRAY);
@@ -233,7 +227,7 @@ public class SciCalculator extends JFrame implements ActionListener{
             input.setText(expression);
         }
     }
-    public static void main(String argvs[])   {
+    public static void main(String args[])   {
         new SciCalculator();
     }
 }

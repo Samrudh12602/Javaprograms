@@ -6,12 +6,12 @@ public class RoundRobin
     {
         int n,i,qt,count,temp,sq=0,bt[],wt[],tat[],rem_bt[];
         float awt=0,atat=0;
-        bt = new int[10];
-        wt = new int[10];
-        tat = new int[10];
-        rem_bt = new int[10];
+        bt = new int[5];
+        wt = new int[5];
+        tat = new int[5];
+        rem_bt = new int[5];
         Scanner s=new Scanner(System.in);
-        System.out.print("Enter the number of process (maximum 10) = ");
+        System.out.print("Enter the number of process (maximum 5) = ");
         n = s.nextInt();
         System.out.print("Enter the burst time of the process\n");
         for (i=0;i<n;i++)
@@ -34,14 +34,14 @@ public class RoundRobin
                 }
                 if(rem_bt[i]>qt)
                     rem_bt[i]= rem_bt[i] - qt;
-                else
-                if(rem_bt[i]>=0)
+                else if(rem_bt[i]>=0)
                 {
                     temp = rem_bt[i];
                     rem_bt[i] = 0;
                 }
                 sq = sq + temp;
                 tat[i] = sq;
+                System.out.println("process "+ (i+1)+"executed for "+ sq +"seconds");
             }
             if(n == count)
                 break;

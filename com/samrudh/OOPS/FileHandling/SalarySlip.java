@@ -14,9 +14,8 @@ public class SalarySlip {
         try {
             bf = new BufferedReader(new FileReader(f));
             String lineRead;
-            int linecount=0;
-            while ((lineRead= bf.readLine())!=null){
-                linecount++;
+            int linecount;
+            for (linecount=0;(lineRead= bf.readLine())!=null;linecount++){
                 switch (linecount){
                     case 1:name= lineRead;break;
                     case 2:id=Integer.parseInt(lineRead);break;
